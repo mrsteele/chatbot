@@ -2,7 +2,7 @@ import fetchPonyfill from 'fetch-ponyfill'
 const { fetch } = fetchPonyfill()
 
 const env = {
-  DOMAIN: 'http://localhost:3000'
+  DOMAIN: ''
 }
 
 const ajax = {}
