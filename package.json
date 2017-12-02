@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon -w server server",
     "build": "next build",
-    "start": "NODE_ENV=production node server"
+    "start": "NODE_ENV=production node server",
+    "deploy": "now --public && now alias"
   },
   "author": "Matt Steele <matt@omnionline.us> (http://omnionline.us/)",
   "license": "MIT",

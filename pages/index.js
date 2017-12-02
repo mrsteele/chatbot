@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Component } from 'react'
 import ajax from '../utils/fetch'
 
@@ -52,6 +53,10 @@ export default class extends Component {
     const Msgs = msgs.map(msg => <div className={msg.author}>{msg.text}</div>)
     return (
       <main>
+        <Head>
+          <title>A chatbot by mrsteele</title>
+          <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        </Head>
         <form className='typearea' onSubmit={this.submitTextarea}>
           <input type='text' value={textarea} onChange={this.handleChange} placeholder='chat here' />
           <button type='button' onClick={this.submitTextarea}>Submit</button>
@@ -59,15 +64,21 @@ export default class extends Component {
         <div className='msgs'>
           {Msgs}
         </div>
+        <footer>
+          A chatbot made by <a href='https://github.com/mrsteele/chatbot' target='_blank'>mrsteele</a>
+        </footer>
+        <style global>{`
+            body {
+              padding: 0;
+              margin: 0;
+              min-height: 100vh;
+              background: #f2f2f2;
+              font-family: Helvatica, Arial, "sans-serif";
+            }
+        `}</style>
         <style jsx>{`
-          main {
-            box-sizing: border-box;
-            max-width: 800px;
-            width: 100%;
-            margin: auto;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            min-height: 75vh;
-            padding: 10px;
+          * {
+            font-size: 2vw;
           }
 
           input {
@@ -80,11 +91,12 @@ export default class extends Component {
 
           button {
             border: none;
-            color: white;
-            background: blue;
+            color: #f2f2f2;
+            background: #0000aa;
             border-radius: 0;
             cursor: pointer;
             outline: none;
+            padding: 1px 15px;
           }
 
           button:hover {
@@ -95,10 +107,20 @@ export default class extends Component {
             display: flex;
           }
 
+          footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0.5;
+            font-size: 0.75em;
+            padding: 0.5em;
+          }
+
+          footer * {
+            font-size: inherit;
+          }
+
           .msgs {
-            margin-top: 10px;
-            color: white;
-            background: #222;
             padding: 10px;
           }
 
@@ -108,7 +130,7 @@ export default class extends Component {
 
           .msgs > :global(div.You):before {
             content: 'You: ';
-            color: green;
+            color: blue;
           }
 
           .msgs > :global(div.Skynet):before {
