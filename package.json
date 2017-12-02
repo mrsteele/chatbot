@@ -1,0 +1,24 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -w server server",
+    "build": "next build",
+    "start": "NODE_ENV=production node server"
+  },
+  "author": "Matt Steele <matt@omnionline.us> (http://omnionline.us/)",
+  "license": "MIT",
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "fetch-ponyfill": "^4.1.0",
+    "next": "^4.1.4",
+    "nodemon": "^1.12.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "standard": "^10.0.3"
+  }
+}
