@@ -4,12 +4,17 @@ I made this as a test and you can check it out too.
 
 This integrates with **api.ai** and can be used to setup a basic back and forth with your client.
 
-### setup
+### Demo
+
+I have added a demo [here](https://chatbot.now.sh) pointing to an AI I created with API.ai.
+
+### Setup
 
 Run the following:
 
 1. Run `npm i`
-2. Create an `.env` file and add your api key like so:
+2. Create an `.env` file and add your **Developer access token**
+api key like so:
 
 ```
 APIAI_KEY=KEYHERE
