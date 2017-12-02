@@ -15,7 +15,8 @@ export default class extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  submitTextarea () {
+  submitTextarea (e) {
+    e.preventDefault()
     ajax.post('/chat', {
       text: this.state.textarea
     }).then(({ text }) => {
@@ -35,7 +36,7 @@ export default class extends Component {
 
   addMessage (msg) {
     this.setState({
-      msgs: this.state.msgs.concat(msg)
+      msgs: [msg].concat(this.state.msgs)
     })
   }
 
@@ -51,10 +52,10 @@ export default class extends Component {
     const Msgs = msgs.map(msg => <div className={msg.author}>{msg.text}</div>)
     return (
       <main>
-        <div className='typearea'>
-          <textarea value={textarea} onChange={this.handleChange} placeholder='chat here' />
+        <form className='typearea' onSubmit={this.submitTextarea}>
+          <input type='text' value={textarea} onChange={this.handleChange} placeholder='chat here' />
           <button type='button' onClick={this.submitTextarea}>Submit</button>
-        </div>
+        </form>
         <div className='msgs'>
           {Msgs}
         </div>
@@ -69,11 +70,12 @@ export default class extends Component {
             padding: 10px;
           }
 
-          textarea {
+          input {
             box-sizing: border-box;
             width: 100%;
             resize: vertical;
             outline: none;
+            padding: 10px;
           }
 
           button {
