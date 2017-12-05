@@ -1,4 +1,7 @@
 {
-  "alias": "chatbot",
+  "alias": [
+    "chatbot",
+    "mattbot"
+  ],
   "dotenv": true
 }

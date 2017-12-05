@@ -22,7 +22,7 @@ export default class extends Component {
       text: this.state.textarea
     }).then(({ text }) => {
       this.addMessage({
-        author: 'Matbot',
+        author: 'Mattbot',
         text
       })
     })
@@ -133,8 +133,8 @@ export default class extends Component {
             color: blue;
           }
 
-          .msgs > :global(div.Matbot):before {
-            content: 'Matbot: ';
+          .msgs > :global(div.Mattbot):before {
+            content: 'Mattbot: ';
             color: red;
           }
         `}</style>
