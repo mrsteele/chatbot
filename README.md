@@ -1,6 +1,6 @@
 # Simple AI Nextjs Chatbot
 
-I made this as a test and you can check it out too.
+I made this as a test and you can check it out too!
 
 This integrates with **api.ai** and can be used to setup a basic back and forth with your client.
 
