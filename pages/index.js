@@ -3,10 +3,6 @@ import { Component } from 'react'
 import ajax from '../utils/fetch'
 
 export default class extends Component {
-  static async getInitialProps ({ req }) {
-    return {}
-  }
-
   constructor (props) {
     super(props)
 
@@ -18,7 +14,7 @@ export default class extends Component {
 
   submitTextarea (e) {
     e.preventDefault()
-    ajax.post('/chat', {
+    ajax.post('/api/chat', {
       text: this.state.textarea
     }).then(({ text }) => {
       this.addMessage({

@@ -4,23 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -w server server",
+    "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node server",
+    "start": "NODE_ENV=production next start",
     "deploy": "now --public && now alias"
   },
   "author": "Matt Steele <matt@omnionline.us> (http://omnionline.us/)",
   "license": "MIT",
   "dependencies": {
     "apiai": "^4.0.3",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^4.0.0",
-    "express": "^4.16.2",
-    "fetch-ponyfill": "^4.1.0",
-    "next": "^4.1.4",
-    "nodemon": "^1.12.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "standard": "^10.0.3"
+    "fetch-ponyfill": "^6.1.0",
+    "next": "^9.3.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "standard": "^14.3.3"
   }
 }

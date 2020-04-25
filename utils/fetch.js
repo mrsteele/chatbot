@@ -11,7 +11,7 @@ const settings = (cookies) => {
   const ret = {
     credentials: 'true',
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json'
     }
   }
